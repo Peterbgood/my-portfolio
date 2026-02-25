@@ -117,7 +117,7 @@ export default function Portfolio() {
               </div>
               <div className="pb-12">
                 <h4 className="text-xl font-bold text-white">Web Developer — FIS</h4>
-                <p className="text-slate-500 text-sm font-bold mb-3 uppercase tracking-wider">2012 — 2025</p>
+                <p className="text-slate-500 text-sm font-bold mb-3 uppercase tracking-wider">2012 — 2026</p>
                 <p className="text-slate-400 text-sm leading-relaxed">
                   The backbone of my career. Built and maintained 50+ custom sites for banks and credit unions using <strong>DNN CMS</strong>. Specialized in WCAG accessibility and secure UI lifecycle management.
                 </p>
@@ -200,7 +200,7 @@ export default function Portfolio() {
                   ))}
                 </div>
                 <a href="https://github.com/Peterbgood" target="_blank" className="bg-white text-black px-8 py-3 rounded-xl font-black text-sm hover:bg-blue-500 hover:text-white transition shadow-2xl">
-                  Inspect My Code on GitHub
+                  View GitHub Code
                 </a>
               </div>
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] -z-10"></div>
