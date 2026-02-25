@@ -56,7 +56,7 @@ export default function Portfolio() {
                <a href="mailto:peterwgood@gmail.com" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">
                   Let's Connect
                </a>
-               <a href="/resume.pdf" target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
+               <a href="/my-portfolio/resume.pdf" target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
                   Resume PDF
                </a>
             </div>
@@ -66,7 +66,7 @@ export default function Portfolio() {
             <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
                <img 
-                 src="/peter.PNG" 
+                 src="/my-portfolio/peter.PNG" 
                  alt="Peter Good" 
                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                />
