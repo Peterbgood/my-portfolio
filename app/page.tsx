@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Portfolio() {
+  // Logic to handle the sub-folder path for GitHub Pages vs Local Dev
+  const isProd = process.env.NODE_ENV === 'production';
+  const bPath = isProd ? '/my-portfolio' : '';
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-500/30 font-sans scroll-smooth">
       {/* Background Decorative Elements */}
@@ -56,7 +60,7 @@ export default function Portfolio() {
                <a href="mailto:peterwgood@gmail.com" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">
                   Let's Connect
                </a>
-               <a href="/my-portfolio/resume.pdf" target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
+               <a href={`${bPath}/resume.pdf`} target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
                   Resume PDF
                </a>
             </div>
@@ -65,11 +69,7 @@ export default function Portfolio() {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-[2rem] overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
-               <img 
-                 src="/my-portfolio/peter.PNG" 
-                 alt="Peter Good" 
-                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-               />
+              <img src={`${bPath}/peter.PNG`} alt="Peter" />
             </div>
           </div>
         </section>
@@ -94,7 +94,6 @@ export default function Portfolio() {
           <h2 className="text-3xl font-black mb-16 text-center italic">The Career Arc</h2>
           <div className="max-w-3xl mx-auto space-y-12">
             
-            {/* 1: Present */}
             <div className="flex gap-6 group">
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_15px_#3b82f6]"></div>
@@ -109,7 +108,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* 2: FIS Web Dev */}
             <div className="flex gap-6 group">
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-slate-700"></div>
@@ -124,7 +122,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* 3: Account Manager */}
             <div className="flex gap-6 group">
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-slate-800"></div>
@@ -146,7 +143,6 @@ export default function Portfolio() {
           <h2 className="text-3xl font-black mb-12">Institutional Proof</h2>
           <div className="grid md:grid-cols-3 gap-6">
             
-            {/* Project 1 */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-blue-500/40 transition-all">
               <div className="p-8">
                 <h3 className="text-xl font-bold mb-2">Geo. D. Warthen Bank</h3>
@@ -158,7 +154,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Project 2 */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-purple-500/40 transition-all">
               <div className="p-8">
                 <h3 className="text-xl font-bold mb-2">Vast Bank</h3>
@@ -170,7 +165,6 @@ export default function Portfolio() {
               </div>
             </div>
 
-            {/* Project 3 */}
             <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-emerald-500/40 transition-all">
               <div className="p-8">
                 <h3 className="text-xl font-bold mb-2">Fidelity Bank</h3>

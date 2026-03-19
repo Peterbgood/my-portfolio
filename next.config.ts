@@ -1,12 +1,9 @@
-import type { NextConfig } from "next";
+const isProd = process.env.NODE_ENV === 'production';
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  // We removed the // below to activate the path
-  basePath: '/my-portfolio', 
+  // Only use the sub-path if we are building for production (GitHub Pages)
+  basePath: isProd ? '/my-portfolio' : '',
 };
 
 export default nextConfig;
