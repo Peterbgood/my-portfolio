@@ -185,7 +185,7 @@ export default function Portfolio() {
                 <h2 className="text-3xl font-black mb-6 italic text-white">The Modern Lab</h2>
                 <p className="text-slate-400 text-lg mb-8 leading-relaxed">
                   While my FIS career is rooted in stability, my lab is where I innovate. Building a suite of 
-                  <strong> React-based tools</strong> (Calorie Counter, Travel Itineraries) to master state 
+                  <strong> React-based tools</strong> (Health & Nutrition Dashboard, Trip Itinerary Manager) to master state 
                   management and server-side rendering.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-10">
