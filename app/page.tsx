@@ -46,15 +46,13 @@ export default function Portfolio() {
         <section className="py-24 md:py-32 flex flex-col md:flex-row items-center gap-12 border-b border-slate-900">
           <div className="flex-1 text-center md:text-left">
             <div className="inline-block px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[10px] tracking-widest font-black mb-6 uppercase">
-              Enterprise Frontend Specialist
+              Enterprise Web Specialist
             </div>
-            <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-none">
-              Modernizing <br />
-              <span className="text-blue-500">The Stack.</span>
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-none">
+  Technical Projects & Continued Development
+</h1>
             <p className="text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
-              12 years at FIS delivering secure, accessible banking interfaces. 
-              Currently bridging enterprise-grade reliability with <span className="text-white">Next.js & React</span>.
+              12 years delivering secure, accessible web platforms for financial institutions.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
                <a href="mailto:peterwgood@gmail.com" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">
