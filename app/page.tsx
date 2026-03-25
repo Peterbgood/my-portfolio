@@ -58,7 +58,7 @@ export default function Portfolio() {
                <a href="mailto:peterwgood@gmail.com" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">
                   Let's Connect
                </a>
-               <a href={`${bPath}/resume.pdf`} target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
+               <a href={`${bPath}/public/Peter_Good_Frontend_Portfolio.pdf`} target="_blank" className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition">
                   Resume PDF
                </a>
             </div>
