@@ -52,7 +52,7 @@ export default function Portfolio() {
   Technical Projects & Continued Development
 </h1>
             <p className="text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
-              12 years delivering secure, accessible web platforms for financial institutions.
+              13 years delivering secure, accessible web platforms for financial institutions.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
                <a href="mailto:peterwgood@gmail.com" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20">
@@ -75,7 +75,7 @@ export default function Portfolio() {
         {/* STATS BENTO */}
         <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-20">
           {[
-            { label: "FIS Career", val: "12+ Yrs" },
+            { label: "FIS Career", val: "13+ Yrs" },
             { label: "Bank Sites", val: "50+" },
             { label: "Optimization", val: "80%" },
             { label: "SLA Speed", val: "1-Day" }
