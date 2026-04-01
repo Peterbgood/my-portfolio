@@ -163,7 +163,7 @@ export default function Portfolio() {
                 <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">
                   "Developed full site using DNN CMS, including custom themes optimized for user trust and cross-browser stability."
                 </p>
-                <a href="http://www.vast.bank" target="_blank" className="text-xs font-black uppercase tracking-widest hover:text-purple-400 transition underline underline-offset-8">Visit Live Site</a>
+                <a href="https://www.vast.bank" target="_blank" className="text-xs font-black uppercase tracking-widest hover:text-purple-400 transition underline underline-offset-8">Visit Live Site</a>
               </div>
             </div>
 
