@@ -181,27 +181,71 @@ export default function Portfolio() {
         </section>
 
         {/* THE MODERN LAB */}
-        <section id="lab" className="py-24 border-t border-slate-900">
-           <div className="bg-gradient-to-br from-slate-900 to-blue-950/40 border border-slate-800 p-12 rounded-[3rem] relative overflow-hidden">
-              <div className="relative z-10 max-w-2xl">
-                <h2 className="text-3xl font-black mb-6 italic text-white">The Modern Lab</h2>
-                <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                  While my FIS career is rooted in stability, my lab is where I innovate. Building a suite of 
-                  <strong> React-based tools</strong> (Health & Nutrition Dashboard, Trip Itinerary Manager) to master state 
-                  management and server-side rendering.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-10">
-                  {['React.js', 'Next.js', 'Tailwind', 'TypeScript', 'Node.js', 'Git'].map(t => (
-                    <span key={t} className="px-3 py-1 bg-slate-950/80 rounded-lg text-[10px] font-bold text-blue-400 border border-blue-500/20">{t}</span>
-                  ))}
-                </div>
-                <a href="https://github.com/Peterbgood" target="_blank" className="bg-white text-black px-8 py-3 rounded-xl font-black text-sm hover:bg-blue-500 hover:text-white transition shadow-2xl">
-                  View GitHub Code
-                </a>
-              </div>
-              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[100px] -z-10"></div>
-           </div>
-        </section>
+<section id="lab" className="py-24 border-t border-slate-900">
+  <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+    <div>
+      <h2 className="text-3xl font-black italic text-white">The Modern Lab</h2>
+      <p className="text-slate-500 mt-2">Experimental builds mastering the "Big Three" frameworks.</p>
+    </div>
+    <div className="flex gap-2">
+      {['React', 'Angular', 'Vue'].map(tech => (
+        <span key={tech} className="px-3 py-1 bg-slate-800/50 rounded-full text-[10px] font-bold text-slate-400 border border-slate-700">{tech}</span>
+      ))}
+    </div>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-6">
+    
+    {/* PROJECT 1: REACT */}
+    <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-blue-500/50 transition-all duration-300">
+      <div className="flex justify-between items-start mb-6">
+        <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold">R</div>
+        <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Active Build</span>
+      </div>
+      <h3 className="text-xl font-bold mb-2 text-white">Career Tracker</h3>
+      <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+        A specialized CRUD application designed to manage the job search lifecycle. Focuses on <strong>React state persistence</strong> and dynamic filtering for high-volume data entry.
+      </p>
+      <div className="flex gap-4">
+        <a href="https://github.com/Peterbgood/Career-Tracker" target="_blank" className="text-xs font-black uppercase tracking-widest text-blue-400 hover:text-blue-300 transition">GitHub</a>
+        <a href="https://peterbgood.github.io/Career-Tracker/" target="_blank" className="text-xs font-black uppercase tracking-widest text-white hover:underline">Live Demo</a>
+      </div>
+    </div>
+
+    {/* PROJECT 2: ANGULAR */}
+    <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-red-500/50 transition-all duration-300">
+      <div className="flex justify-between items-start mb-6">
+        <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 font-bold">A</div>
+        <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Enterprise Architecture</span>
+      </div>
+      <h3 className="text-xl font-bold mb-2 text-white">Angular Job Board</h3>
+      <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+        Leveraging <strong>TypeScript-heavy architecture</strong> to build a structured recruitment platform. Explores Angular's dependency injection and modular component design.
+      </p>
+      <div className="flex gap-4">
+        <a href="https://github.com/Peterbgood/angular-job-board" target="_blank" className="text-xs font-black uppercase tracking-widest text-red-400 hover:text-red-300 transition">GitHub</a>
+        <a href="https://peterbgood.github.io/angular-job-board/" target="_blank" className="text-xs font-black uppercase tracking-widest text-white hover:underline">Live Demo</a>
+      </div>
+    </div>
+
+    {/* PROJECT 3: VUE */}
+    <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-emerald-500/50 transition-all duration-300">
+      <div className="flex justify-between items-start mb-6">
+        <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 font-bold">V</div>
+        <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Financial Logic</span>
+      </div>
+      <h3 className="text-xl font-bold mb-2 text-white">Multi-City Mortgage Calc</h3>
+      <p className="text-sm text-slate-400 mb-8 leading-relaxed">
+        Utilizes <strong>Vue 3's Reactivity System</strong> to compare affordability across three cities. Applies 13 years of banking domain knowledge to a modern reactive UI.
+      </p>
+      <div className="flex gap-4">
+        <a href="https://github.com/Peterbgood/mortgage-calc" target="_blank" className="text-xs font-black uppercase tracking-widest text-emerald-400 hover:text-emerald-300 transition">GitHub</a>
+        <a href="https://peterbgood.github.io/mortgage-calc/" target="_blank" className="text-xs font-black uppercase tracking-widest text-white hover:underline">Live Demo</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* EDUCATION & CONTACT */}
         <section className="py-24 grid md:grid-cols-2 gap-12 items-center border-t border-slate-900">
