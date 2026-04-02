@@ -96,19 +96,19 @@ export default function Portfolio() {
           <h2 className="text-3xl font-black mb-16 text-center italic">The Career Arc</h2>
           <div className="max-w-3xl mx-auto space-y-12">
             
-            <div className="flex gap-6 group">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_15px_#3b82f6]"></div>
-                <div className="w-0.5 h-full bg-slate-800"></div>
-              </div>
-              <div className="pb-12">
-                <h4 className="text-xl font-bold text-white">Modern Lab Mastery</h4>
-                <p className="text-blue-500 text-sm font-bold mb-3 uppercase tracking-wider">Present • Learning & Building</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Deep diving into <strong>React, Next.js, and Tailwind CSS</strong>. Applying a decade of institutional logic to modern, component-driven frontend architecture.
-                </p>
-              </div>
-            </div>
+           <div className="flex gap-6 group">
+  <div className="flex flex-col items-center">
+    <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_15px_#3b82f6]"></div>
+    <div className="w-0.5 h-full bg-slate-800"></div>
+  </div>
+  <div className="pb-12">
+    <h4 className="text-xl font-bold text-white">Modern Lab Mastery</h4>
+    <p className="text-blue-500 text-sm font-bold mb-3 uppercase tracking-wider">Present • Advanced Engineering</p>
+    <p className="text-slate-400 text-sm leading-relaxed">
+      Mastering the <strong>"Big Three" (React, Angular, Vue 3)</strong> using <strong>Vite and TypeScript</strong>. Applying a decade of institutional logic to modern, component-driven architecture and high-performance build toolchains.
+    </p>
+  </div>
+</div>
 
             <div className="flex gap-6 group">
               <div className="flex flex-col items-center">
