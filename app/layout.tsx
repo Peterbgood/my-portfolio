@@ -5,9 +5,13 @@ import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Consolidated metadata with your SVG favicon
 export const metadata: Metadata = {
   title: "Peter Good | Portfolio",
   description: "Enterprise Frontend Specialist",
+  icons: {
+    icon: `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%232563EB' /></svg>`,
+  },
 };
 
 export default function RootLayout({
