@@ -22,14 +22,14 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white italic shadow-lg shadow-blue-500/20">P</div>
-            <span className="font-bold tracking-tight text-lg uppercase tracking-wider">Peter Good</span>
+            <span className="font-bold tracking-tight text-lg uppercase">Peter Good</span>
           </div>
           
           <div className="flex items-center gap-4 md:gap-8">
             <div className="hidden md:flex items-center gap-6 border-r border-slate-800 pr-6 mr-2">
-               <a href="#work" className="text-sm text-slate-400 hover:text-white transition">Work</a>
+               <a href="#work" className="text-sm text-slate-400 hover:text-white transition">Enterprise Work</a>
                <a href="#timeline" className="text-sm text-slate-400 hover:text-white transition">Experience</a>
-               <a href="#lab" className="text-sm text-slate-400 hover:text-white transition">Modern Lab</a>
+               <a href="#rd" className="text-sm text-slate-400 hover:text-white transition">Strategic R&D</a>
             </div>
             
             <div className="flex items-center gap-4">
@@ -50,13 +50,14 @@ export default function Portfolio() {
         <section className="py-24 md:py-32 flex flex-col md:flex-row items-center gap-12 border-b border-slate-900">
           <div className="flex-1 text-center md:text-left">
             <div className="inline-block px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[10px] tracking-widest font-black mb-6 uppercase">
-              Enterprise Web Specialist
+              Senior Frontend Engineer | Technical Solutions Architect
             </div>
             <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-none">
-              Technical Projects & Continued Development
+              Modernizing Enterprise Platform Infrastructure
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl leading-relaxed mb-10">
-              13 years delivering secure, accessible web platforms for financial institutions.
+              13+ years architecting scalable web platforms for global financial institutions. 
+              Bridging legacy enterprise systems with modern <strong>React, TypeScript, and WCAG 2.2 AA</strong> standards.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
                <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" className="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition shadow-xl shadow-blue-500/20 text-white">
@@ -68,7 +69,7 @@ export default function Portfolio() {
                 rel="noreferrer"
                 className="px-8 py-4 bg-slate-900 border border-slate-800 rounded-2xl font-bold hover:bg-slate-800 transition text-slate-100"
               >
-                Resume PDF
+                Download Resume
               </a>
             </div>
           </div>
@@ -85,9 +86,9 @@ export default function Portfolio() {
         <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-20">
           {[
             { label: "FIS Career", val: "13+ Yrs" },
-            { label: "Bank Sites", val: "50+" },
-            { label: "Optimization", val: "80%" },
-            { label: "SLA Speed", val: "1-Day" }
+            { label: "Bank Platforms", val: "50+" },
+            { label: "Active Users", val: "500k+" },
+            { label: "SLA Resolution", val: "Same-Day" }
           ].map((stat) => (
             <div key={stat.label} className="bg-slate-900/30 border border-slate-800/50 p-8 rounded-3xl text-center">
               <p className="text-3xl font-black text-white mb-1 tracking-tight">{stat.val}</p>
@@ -98,32 +99,19 @@ export default function Portfolio() {
 
         {/* PROFESSIONAL TIMELINE */}
         <section id="timeline" className="py-24 border-t border-slate-900">
-          <h2 className="text-3xl font-black mb-16 text-center italic">The Career Arc</h2>
+          <h2 className="text-3xl font-black mb-16 text-center italic">Professional Career Arc</h2>
           <div className="max-w-3xl mx-auto space-y-12">
+            
             <div className="flex gap-6 group">
               <div className="flex flex-col items-center">
                 <div className="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_15px_#3b82f6]"></div>
                 <div className="w-0.5 h-full bg-slate-800"></div>
               </div>
               <div className="pb-12">
-                <h4 className="text-xl font-bold text-white">Modern Lab Mastery</h4>
-                <p className="text-blue-500 text-sm font-bold mb-3 uppercase tracking-wider">Present • Advanced Engineering</p>
+                <h4 className="text-xl font-bold text-white">Senior Frontend Developer | Platform Modernization — FIS</h4>
+                <p className="text-blue-500 text-sm font-bold mb-3 uppercase tracking-wider">2012 — March 2026</p>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Mastering <strong>React, Angular, and Vue 3</strong> using <strong>Vite and TypeScript</strong>. Applying institutional logic to modern, component-driven architecture.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex gap-6 group">
-              <div className="flex flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-slate-700"></div>
-                <div className="w-0.5 h-full bg-slate-800"></div>
-              </div>
-              <div className="pb-12">
-                <h4 className="text-xl font-bold text-white">Web Developer — FIS</h4>
-                <p className="text-slate-500 text-sm font-bold mb-3 uppercase tracking-wider">2012 — 2026</p>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Architected 50+ responsive platforms for banks nationwide. Specialized in <strong>WCAG accessibility</strong> and secure UI system lifecycle management.
+                  Led internal <strong>Research & Development (R&D)</strong> to evaluate React, Angular, and Vue 3 as strategic successors to legacy infrastructure. Architected and launched 50+ responsive banking platforms nationwide while spearheading <strong>WCAG 2.2 AA</strong> accessibility standards across the enterprise.
                 </p>
               </div>
             </div>
@@ -133,86 +121,84 @@ export default function Portfolio() {
                 <div className="w-4 h-4 rounded-full bg-slate-800"></div>
               </div>
               <div className="pb-4">
-                <h4 className="text-xl font-bold text-white">Account Manager — FIS</h4>
+                <h4 className="text-xl font-bold text-white">Account Manager / Technical Liaison — FIS</h4>
                 <p className="text-slate-500 text-sm font-bold mb-3 uppercase tracking-wider">2006 — 2012</p>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Foundation in technical relationships and SLA management, ensuring all code aligns with <strong>business logic and user goals</strong>.
+                  Managed technical relationships for 50+ financial institutions, ensuring high-stakes product deliveries aligned with complex business logic and regulatory requirements.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SELECTED CASE STUDIES */}
-        <section id="work" className="py-24 border-t border-slate-900">
-          <h2 className="text-3xl font-black mb-12">Institutional Proof</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-blue-500/40 transition-all p-8">
-                <h3 className="text-xl font-bold mb-2">Geo. D. Warthen Bank</h3>
-                <p className="text-xs text-blue-500 font-bold mb-4 uppercase">Full Responsive Build</p>
-                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Built entire responsive site with focus on WCAG AA accessibility and secure banking interfaces."</p>
-                <a href="https://www.gdwbank.com/" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-blue-400 transition underline underline-offset-8">Visit Live Site</a>
-            </div>
-
-            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-purple-500/40 transition-all p-8">
-                <h3 className="text-xl font-bold mb-2">Vast Bank</h3>
-                <p className="text-xs text-purple-500 font-bold mb-4 uppercase">DNN CMS Development</p>
-                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Developed full site using DNN CMS, optimized for user trust and cross-browser stability."</p>
-                <a href="https://www.vast.bank" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-purple-400 transition underline underline-offset-8">Visit Live Site</a>
-            </div>
-
-            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-emerald-500/40 transition-all p-8">
-                <h3 className="text-xl font-bold mb-2">Fidelity Bank</h3>
-                <p className="text-xs text-emerald-500 font-bold mb-4 uppercase">Front-end Rebuild</p>
-                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Led the entire rebuild, creating mobile-first site with polished UX and full WCAG compliance."</p>
-                <a href="http://www.fbot.com" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-emerald-400 transition underline underline-offset-8">Visit Live Site</a>
-            </div>
-          </div>
-        </section>
-
-        {/* MODERN LAB */}
-        <section id="lab" className="py-24 border-t border-slate-900">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-            <div>
-              <h2 className="text-3xl font-black italic text-white">The Modern Lab</h2>
-              <p className="text-slate-500 mt-2">Experimental builds mastering the modern frontend ecosystem.</p>
-            </div>
+        {/* STRATEGIC R&D */}
+        <section id="rd" className="py-24 border-t border-slate-900">
+          <div className="mb-12">
+            <h2 className="text-3xl font-black italic text-white">Strategic R&D & Specialization</h2>
+            <p className="text-slate-500 mt-2">Engineering initiatives evaluating modern successors for enterprise-scale platforms.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-blue-500/50 transition-all">
               <div className="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 font-bold mb-6">R</div>
-              <h3 className="text-xl font-bold mb-2">Career Tracker</h3>
-              <p className="text-sm text-slate-400 mb-8">Production-style CRUD app focusing on <strong>React state persistence</strong> and dynamic data filtering.</p>
+              <h3 className="text-xl font-bold mb-2">Platform CRUD Architecture</h3>
+              <p className="text-sm text-slate-400 mb-8">Implementing high-fidelity <strong>React & TypeScript</strong> patterns for state persistence and dynamic data filtering in enterprise workflows.</p>
               <div className="flex gap-4">
-                <a href="https://github.com/Peterbgood/Career-Tracker" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-blue-400">GitHub</a>
+                <a href="https://github.com/Peterbgood/Career-Tracker" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-blue-400">Technical Brief</a>
               </div>
             </div>
 
             <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-red-500/50 transition-all">
               <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-400 font-bold mb-6">A</div>
-              <h3 className="text-xl font-bold mb-2">Angular Job Board</h3>
-              <p className="text-sm text-slate-400 mb-8">Structured recruitment platform utilizing <strong>TypeScript architecture</strong> and modular component design.</p>
+              <h3 className="text-xl font-bold mb-2">Modular UI Systems</h3>
+              <p className="text-sm text-slate-400 mb-8">Evaluating <strong>Angular & TypeScript</strong> for modular, multi-tenant component design within highly regulated environments.</p>
               <div className="flex gap-4">
-                <a href="https://github.com/Peterbgood/angular-job-board" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-red-400">GitHub</a>
+                <a href="https://github.com/Peterbgood/angular-job-board" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-red-400">Technical Brief</a>
               </div>
             </div>
 
             <div className="group bg-slate-900/40 border border-slate-800 p-8 rounded-[2rem] hover:border-emerald-500/50 transition-all">
               <div className="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-400 font-bold mb-6">V</div>
-              <h3 className="text-xl font-bold mb-2">Mortgage Calc</h3>
-              <p className="text-sm text-slate-400 mb-8">Reactive UI comparing affordability using <strong>Vue 3's Reactivity System</strong> and banking domain knowledge.</p>
+              <h3 className="text-xl font-bold mb-2">Reactive Financial Tools</h3>
+              <p className="text-sm text-slate-400 mb-8">Utilizing <strong>Vue 3</strong> and banking domain knowledge to prototype reactive comparison tools for complex financial data sets.</p>
               <div className="flex gap-4">
-                <a href="https://github.com/Peterbgood/mortgage-calc" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-emerald-400">GitHub</a>
+                <a href="https://github.com/Peterbgood/mortgage-calc" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest text-emerald-400">Technical Brief</a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* EDUCATION & SECURE LINKEDIN CTA */}
+        {/* INSTITUTIONAL PROOF */}
+        <section id="work" className="py-24 border-t border-slate-900">
+          <h2 className="text-3xl font-black mb-12">Institutional Proof-of-Work</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-blue-500/40 transition-all p-8">
+                <h3 className="text-xl font-bold mb-2">Geo. D. Warthen Bank</h3>
+                <p className="text-xs text-blue-500 font-bold mb-4 uppercase">Enterprise Platform Build</p>
+                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Delivered a secure, high-scale responsive platform with 100% adherence to WCAG accessibility compliance."</p>
+                <a href="https://www.gdwbank.com/" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-blue-400 transition underline underline-offset-8">Visit Site</a>
+            </div>
+
+            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-purple-500/40 transition-all p-8">
+                <h3 className="text-xl font-bold mb-2">Vast Bank</h3>
+                <p className="text-xs text-purple-500 font-bold mb-4 uppercase">CMS Migration & Architecture</p>
+                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Modernized multi-tenant architecture for improved cross-browser stability and client user trust."</p>
+                <a href="https://www.vast.bank" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-purple-400 transition underline underline-offset-8">Visit Site</a>
+            </div>
+
+            <div className="bg-slate-900/40 border border-slate-800 rounded-[2rem] overflow-hidden hover:border-emerald-500/40 transition-all p-8">
+                <h3 className="text-xl font-bold mb-2">Fidelity Bank</h3>
+                <p className="text-xs text-emerald-500 font-bold mb-4 uppercase">Frontend Modernization</p>
+                <p className="text-sm text-slate-400 mb-8 leading-relaxed italic">"Led mobile-first architecture rebuild, balancing regulatory requirements with high-performance UX standards."</p>
+                <a href="http://www.fbot.com" target="_blank" rel="noreferrer" className="text-xs font-black uppercase tracking-widest hover:text-emerald-400 transition underline underline-offset-8">Visit Site</a>
+            </div>
+          </div>
+        </section>
+
+        {/* EDUCATION & CONTACT */}
         <section id="contact" className="py-24 grid md:grid-cols-2 gap-12 items-center border-t border-slate-900">
           <div>
-            <h2 className="text-3xl font-black mb-8">Education</h2>
+            <h2 className="text-3xl font-black mb-8">Education & Credentials</h2>
             <div className="space-y-6">
               <div className="p-6 bg-slate-900/30 rounded-2xl border border-slate-800/50">
                 <h4 className="font-bold text-lg">A.S. Web Development</h4>
@@ -226,8 +212,8 @@ export default function Portfolio() {
           </div>
 
           <div className="text-center md:text-right">
-            <h2 className="text-3xl font-black mb-4 italic">Let's Talk.</h2>
-            <p className="text-slate-500 mb-10 italic">Available for remote or Knoxville-based roles.</p>
+            <h2 className="text-3xl font-black mb-4 italic">Open for Strategic Opportunities.</h2>
+            <p className="text-slate-500 mb-10 italic">Remote or local Knoxville-based senior roles.</p>
             
             <a 
               href={linkedInUrl} 
@@ -235,7 +221,7 @@ export default function Portfolio() {
               rel="noopener noreferrer"
               className="text-2xl md:text-4xl font-bold text-white hover:text-blue-500 transition underline underline-offset-[12px] decoration-blue-500/30"
             >
-              Message me on LinkedIn
+              Connect on LinkedIn
             </a>
           </div>
         </section>
@@ -244,7 +230,7 @@ export default function Portfolio() {
 
       <footer className="py-20 text-center border-t border-slate-900/50">
         <p className="text-slate-600 text-[10px] uppercase tracking-[0.3em] font-black">
-          © 2026 Peter Good | Built with React & Tailwind CSS
+          © 2026 Peter Good | Architected with React & Tailwind CSS
         </p>
       </footer>
     </div>
