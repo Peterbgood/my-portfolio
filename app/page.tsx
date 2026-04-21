@@ -213,7 +213,7 @@ export default function Portfolio() {
 
           <div className="text-center md:text-right">
             <h2 className="text-3xl font-black mb-4 italic">Open for Strategic Opportunities.</h2>
-            <p className="text-slate-500 mb-10 italic">Remote or local Knoxville-based senior roles.</p>
+            <p className="text-slate-500 mb-10 italic">Remote or on-site senior roles.</p>
             
             <a 
               href={linkedInUrl} 
