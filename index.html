@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Good | Business Analyst &amp; Accessibility Lead</title>
+<meta name="description" content="Business Analyst and WCAG 2.2 AA Accessibility Lead with 13+ years in enterprise banking technology at FIS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --ink:#182A3D;
+    --ink-soft:#425163;
+    --paper:#FAF9F5;
+    --panel:#F1EFE7;
+    --line:#D9D3C3;
+    --brass:#8C6A32;
+    --brass-deep:#6B4F22;
+    --max:920px;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ animation:none !important; transition:none !important; }
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter", system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  h1,h2,h3{
+    font-family:"Source Serif 4", Georgia, serif;
+    color:var(--ink);
+    margin:0;
+    font-weight:600;
+  }
+
+  a{ color:var(--brass-deep); }
+  a:hover{ color:var(--brass); }
+
+  a:focus-visible,
+  button:focus-visible{
+    outline:2px solid var(--brass-deep);
+    outline-offset:3px;
+  }
+
+  .skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    background:var(--ink);
+    color:#fff;
+    padding:10px 16px;
+    z-index:100;
+    border-radius:4px;
+  }
+  .skip-link:focus{
+    left:16px;
+    top:16px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* Header */
+  header.site{
+    position:sticky;
+    top:0;
+    background:rgba(250,249,245,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    z-index:20;
+  }
+  .nav-row{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:16px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .wordmark{
+    font-family:"Source Serif 4", serif;
+    font-weight:600;
+    font-size:1.15rem;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  nav.primary ul{
+    list-style:none;
+    display:flex;
+    gap:26px;
+    margin:0;
+    padding:0;
+    flex-wrap:wrap;
+  }
+  nav.primary a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+  }
+  nav.primary a:hover{ color:var(--brass-deep); }
+  .nav-social{
+    display:flex;
+    gap:16px;
+  }
+  .nav-social a{
+    color:var(--ink-soft);
+    font-size:0.9rem;
+    text-decoration:none;
+  }
+
+  @media (max-width:640px){
+    .nav-row{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:12px;
+      padding:14px 20px;
+    }
+    nav.primary ul{
+      gap:14px;
+    }
+    nav.primary a{
+      font-size:0.88rem;
+    }
+  }
+
+  /* Hero */
+  .hero{
+    padding:64px 0 48px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .eyebrow{
+    color:var(--ink-soft);
+    font-size:0.98rem;
+    margin-bottom:14px;
+  }
+  h1.headline{
+    font-size:2.5rem;
+    line-height:1.18;
+    letter-spacing:-0.01em;
+  }
+  .hero p.sub{
+    margin-top:20px;
+    max-width:56ch;
+    color:var(--ink-soft);
+    font-size:1.03rem;
+  }
+  .hero-ctas{
+    margin-top:28px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:11px 22px;
+    text-decoration:none;
+    font-size:0.95rem;
+    border-radius:3px;
+    border:1px solid var(--ink);
+    text-align:center;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:#fff;
+  }
+  .btn-primary:hover{
+    background:var(--brass-deep);
+    border-color:var(--brass-deep);
+    color:#fff;
+  }
+  .btn-outline{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .btn-outline:hover{
+    border-color:var(--ink);
+  }
+
+  .hero-portrait{
+    text-align:center;
+  }
+  .hero-portrait img{
+    width:180px;
+    height:180px;
+    max-width:100%;
+    object-fit:cover;
+    border-radius:4px;
+    border:1px solid var(--line);
+  }
+
+  @media (max-width:760px){
+    .hero{ padding:40px 0 32px; }
+    .hero-grid{ 
+      grid-template-columns:1fr; 
+      gap:32px;
+    }
+    .hero-portrait{
+      order:-1;
+    }
+    h1.headline{
+      font-size:1.9rem;
+    }
+    .btn{
+      width:100%;
+    }
+  }
+
+  /* Stat strip */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .stat{
+    padding:26px 20px;
+    text-align:center;
+    border-left:1px solid var(--line);
+  }
+  .stat:first-child{ border-left:none; }
+  .stat .num{
+    font-family:"Source Serif 4", serif;
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .stat .label{
+    margin-top:4px;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  @media (max-width:640px){
+    .stats{ grid-template-columns:repeat(2,1fr); }
+    .stat{ border-top:1px solid var(--line); }
+    .stat:nth-child(1), .stat:nth-child(2){ border-top:none; }
+    .stat:nth-child(2n+1){ border-left:none; }
+  }
+
+  /* Section shell */
+  section{
+    padding:56px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:20px;
+    margin-bottom:34px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:1.55rem;
+  }
+  .section-head p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:0.97rem;
+    max-width:40ch;
+  }
+
+  /* Enterprise work */
+  .work-list{
+    display:grid;
+    gap:0;
+  }
+  .work-item{
+    display:grid;
+    grid-template-columns:200px 1fr auto;
+    gap:24px;
+    padding:22px 0;
+    border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .work-list .work-item:first-child{ border-top:none; }
+  .work-item h3{
+    font-size:1.08rem;
+  }
+  .work-tag{
+    color:var(--brass-deep);
+    font-size:0.88rem;
+  }
+  .work-item p{
+    margin:6px 0 0;
+    color:var(--ink-soft);
+    font-size:0.96rem;
+  }
+  .work-item a.visit{
+    font-size:0.9rem;
+    white-space:nowrap;
+    text-decoration:none;
+    border-bottom:1px solid var(--brass-deep);
+  }
+  @media (max-width:700px){
+    .work-item{ grid-template-columns:1fr; gap:8px; }
+    .work-item a.visit{ display:inline-block; margin-top:8px; }
+  }
+
+  /* Expertise */
+  .expertise-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+  }
+  .expertise-item{
+    padding:24px 26px;
+    border-left:1px solid var(--line);
+  }
+  .expertise-list .expertise-item:first-child{ border-left:none; }
+  .expertise-item h3{
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+  .expertise-item p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+  }
+  @media (max-width:760px){
+    .expertise-list{ grid-template-columns:1fr; }
+    .expertise-item{ border-left:none; border-top:1px solid var(--line); padding:22px 0; }
+    .expertise-list .expertise-item:first-child{ border-top:none; }
+  }
+
+  /* Timeline */
+  .timeline{
+    display:grid;
+    gap:0;
+  }
+  .role{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:26px;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .timeline .role:first-child{ border-top:none; }
+  .role .dates{
+    color:var(--ink-soft);
+    font-size:0.9rem;
+    padding-top:3px;
+  }
+  .role h3{
+    font-size:1.1rem;
+  }
+  .role .org{
+    color:var(--brass-deep);
+    font-size:0.95rem;
+    margin-top:2px;
+  }
+  .role p, .role ul{
+    margin-top:12px;
+    color:var(--ink-soft);
+    font-size:0.96rem;
+  }
+  .role ul{
+    padding-left:20px;
+    margin-bottom:0;
+  }
+  .role li{ margin-bottom:6px; }
+  @media (max-width:700px){
+    .role{ grid-template-columns:1fr; gap:6px; }
+  }
+
+  /* Projects */
+  .projects-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+  }
+  .project{
+    background:var(--panel);
+    padding:20px 22px;
+    border-radius:3px;
+  }
+  .project h3{
+    font-size:1rem;
+    font-family:"Inter", sans-serif;
+    font-weight:600;
+  }
+  .project .stack{
+    margin-top:6px;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+  }
+  .project p{
+    margin:10px 0 0;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+  .project a{
+    display:inline-block;
+    margin-top:10px;
+    font-size:0.85rem;
+    text-decoration:none;
+    border-bottom:1px solid var(--brass-deep);
+  }
+  .projects-note{
+    margin:0 0 24px;
+    color:var(--ink-soft);
+    font-size:0.94rem;
+    max-width:60ch;
+  }
+  @media (max-width:700px){
+    .projects-list{ grid-template-columns:1fr; }
+  }
+
+  /* Education */
+  .edu-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+  .edu-item h3{
+    font-size:1.02rem;
+  }
+  .edu-item p{
+    margin:4px 0 0;
+    color:var(--ink-soft);
+    font-size:0.93rem;
+  }
+  @media (max-width:700px){
+    .edu-list{ grid-template-columns:1fr; }
+  }
+
+  /* Footer CTA */
+  footer.cta{
+    padding:60px 0 40px;
+    text-align:center;
+  }
+  footer.cta h2{
+    font-size:1.7rem;
+  }
+  footer.cta p{
+    color:var(--ink-soft);
+    margin-top:12px;
+  }
+  footer.cta .btn{
+    margin-top:22px;
+  }
+  .fine-print{
+    text-align:center;
+    padding:22px 0 50px;
+    color:var(--ink-soft);
+    font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="wordmark">Peter Good</a>
+    <nav class="primary" aria-label="Primary">
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Enterprise Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="nav-social">
+      <a href="https://github.com/Peterbgood">GitHub</a>
+      <a href="https://www.linkedin.com/in/peter-good/">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Business Analyst and WCAG 2.2 AA Accessibility Lead, 13+ years in enterprise banking technology at FIS</p>
+        <h1 class="headline">Turning banking requirements into platforms every customer can use.</h1>
+        <p class="sub">I gather requirements, document user stories and functional specifications, and lead accessibility compliance across enterprise banking platforms &mdash; work that has to hold up under regulatory scrutiny and serve every customer, including those using assistive technology.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#experience">View experience</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/peter-good/">Connect on LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <img src="peter.PNG" alt="Portrait of Peter Good">
+      </div>
+    </div>
+  </section>
+
+  <div class="stats wrap" style="max-width:var(--max); margin:0 auto; padding-left:0; padding-right:0;">
+    <div class="stat"><div class="num">13+</div><div class="label">Years in enterprise banking</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">Institutional platforms</div></div>
+    <div class="stat"><div class="num">500K+</div><div class="label">Users served</div></div>
+    <div class="stat"><div class="num">AA</div><div class="label">WCAG 2.2 compliance level</div></div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>13+ years spanning requirements, delivery, and accessibility governance in regulated financial environments.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="role">
+          <div class="dates">June 2026 &ndash; Present</div>
+          <div>
+            <h3>Personal Banker</h3>
+            <div class="org">Fifth Third Bank</div>
+            <p>Work directly within core banking systems, account operations, and regulatory/compliance procedures in a member-facing retail environment. Apply working knowledge of financial regulations affecting depository institutions to daily account servicing, product recommendations, and risk-aware decision-making. This hands-on exposure to retail banking operations and compliance documentation directly informs requirements gathering and stakeholder communication on banking-platform projects.</p>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="dates">Feb 2012 &ndash; Mar 2026</div>
+          <div>
+            <h3>Web Accessibility Lead / Business Analyst</h3>
+            <div class="org">FIS</div>
+            <p>Acted as primary liaison between financial institution clients and engineering teams, translating business requirements into functional specifications, user stories, and epics for 50+ enterprise banking platforms serving 500,000+ users.</p>
+            <ul>
+              <li>Served as enterprise WCAG 2.2 AA subject-matter expert &mdash; led audits and remediation across all 50+ institutional platforms.</li>
+              <li>Conducted manual assistive-technology testing (NVDA, JAWS, VoiceOver) and keyboard-navigation mapping.</li>
+              <li>Built internal accessibility documentation and frameworks enabling non-technical teams to maintain compliance independently.</li>
+              <li>Owned requirements gathering, UAT authoring, and regression testing across the full SDLC for institutional platform launches.</li>
+              <li>Coordinated accessibility and change-management governance across Engineering, UX, Product, and Legal.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="dates">Nov 2006 &ndash; Jan 2012</div>
+          <div>
+            <h3>Account Manager / Product Support</h3>
+            <div class="org">FIS</div>
+            <p>Managed technical relationships for 50+ financial institution clients across online banking, cash management, and mobile platform portfolios. Served as primary point of contact for product integrations and feature rollouts, translating business requirements into technical specifications and maintaining strict SLA compliance through disciplined escalation management.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Expertise</h2>
+        <p>Where business analysis and accessibility work meet in regulated fintech environments.</p>
+      </div>
+      <div class="expertise-list">
+        <div class="expertise-item">
+          <h3>Business Analysis &amp; Requirements</h3>
+          <p>Primary liaison between financial institution stakeholders and engineering teams. Requirements gathering, user stories, functional specifications, UAT authoring, and process mapping across the full SDLC.</p>
+        </div>
+        <div class="expertise-item">
+          <h3>WCAG 2.2 AA Accessibility</h3>
+          <p>Enterprise accessibility subject-matter expert across 50+ live platforms. Manual assistive-technology testing with NVDA, JAWS, and VoiceOver, keyboard navigation mapping, and semantic markup remediation embedded from the start.</p>
+        </div>
+        <div class="expertise-item">
+          <h3>Platform &amp; Compliance Governance</h3>
+          <p>Full SDLC ownership in regulated fintech environments, from requirements through production support, with governance coordinated across Engineering, UX, Product, and Legal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Enterprise platform work</h2>
+        <p>Live banking platforms delivered in regulated production environments at FIS.</p>
+      </div>
+      <div class="work-list">
+
+        <div class="work-item">
+          <div>
+            <h3>Geo. D. Warthen Bank</h3>
+            <div class="work-tag">Platform build &amp; accessibility compliance</div>
+          </div>
+          <p>Delivered a secure, responsive banking platform with full WCAG 2.2 AA compliance, built on DNN CMS with semantic HTML and structured content governance.</p>
+          <a class="visit" href="https://www.gdwbank.com/">Visit site</a>
+        </div>
+
+        <div class="work-item">
+          <div>
+            <h3>Vast Bank</h3>
+            <div class="work-tag">CMS migration &amp; governance</div>
+          </div>
+          <p>Led multi-tenant CMS modernization, improving content governance, platform reliability, and stakeholder handoff for a digitally-forward banking brand.</p>
+          <a class="visit" href="https://www.vast.bank">Visit site</a>
+        </div>
+
+        <div class="work-item">
+          <div>
+            <h3>Fidelity Bank</h3>
+            <div class="work-tag">Mobile-first rebuild</div>
+          </div>
+          <p>Led requirements and delivery for a ground-up mobile-first platform rebuild, balancing strict regulatory requirements with accessibility standards.</p>
+          <a class="visit" href="http://www.fbot.com">Visit site</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Personal projects</h2>
+        <p><a href="https://github.com/Peterbgood">github.com/Peterbgood</a></p>
+      </div>
+      <p class="projects-note">A handful of side projects where I practice frontend fundamentals and new tools outside of work &mdash; not production systems.</p>
+      <div class="projects-list">
+
+        <div class="project">
+          <h3>modern-bank-landing</h3>
+          <div class="stack">React 19, TypeScript, Tailwind v4, Next.js</div>
+          <p>A fintech landing-page concept built to practice component architecture and a responsive, glassmorphic UI.</p>
+          <a href="https://github.com/Peterbgood/modern-bank-landing">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>marketing-crm</h3>
+          <div class="stack">React, TypeScript, Tailwind v4, GitHub Actions</div>
+          <p>A Kanban-style CRM project exploring component architecture and automated deployment via GitHub Actions.</p>
+          <a href="https://github.com/Peterbgood/marketing-crm">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>NutriGraph</h3>
+          <div class="stack">React, TypeScript, Vite, Firebase Firestore</div>
+          <p>A health-tracking dashboard practicing real-time data sync and state management with Firebase Firestore.</p>
+          <a href="https://github.com/Peterbgood/NutriGraph">View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <h3>secure-banking-interface</h3>
+          <div class="stack">JavaScript, modular UI</div>
+          <p>A financial-dashboard concept exploring role-based visibility and data-privacy patterns in the UI.</p>
+          <a href="https://github.com/Peterbgood/secure-banking-interface">View on GitHub</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Education</h2>
+      </div>
+      <div class="edu-list">
+        <div class="edu-item">
+          <h3>A.S. Web Development</h3>
+          <p>St. Petersburg College, 2022</p>
+        </div>
+        <div class="edu-item">
+          <h3>Web Development Certification</h3>
+          <p>St. Petersburg College, 2015</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="cta">
+  <div class="wrap">
+    <h2>Open to Business Analyst &amp; Accessibility roles.</h2>
+    <p>Onsite, hybrid, or remote &mdash; business analysis, requirements, WCAG 2.2 AA accessibility.</p>
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/peter-good/">Connect on LinkedIn</a>
+  </div>
+</footer>
+
+<p class="fine-print">&copy; 2026 Peter Good &mdash; Built with HTML &amp; CSS.</p>
+
+</body>
+</html>
