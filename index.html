@@ -1,410 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Good | Senior Business Systems Analyst & Web Accessibility Lead</title>
-    <meta name="description" content="Senior Business Systems Analyst & WCAG 2.2 AA Accessibility Lead with 13+ years of experience delivering enterprise banking platforms.">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f4f6f8',
-                            100: '#e5e9f0',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                            accent: '#2563eb',
-                            accentHover: '#1d4ed8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Good | Business Analyst &amp; CMS Operations Lead</title>
+<meta name="description" content="Business Analyst, CMS Governance Specialist, and WCAG 2.2 AA Lead with 13+ years in enterprise banking technology at FIS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#182A3D;
+    --ink-soft:#425163;
+    --paper:#FAF9F5;
+    --panel:#F1EFE7;
+    --line:#D9D3C3;
+    --brass:#8C6A32;
+    --brass-deep:#6B4F22;
+    --max:920px;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Inter", system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  h1,h2,h3{
+    font-family:"Source Serif 4", Georgia, serif;
+    color:var(--ink);
+    margin:0;
+    font-weight:600;
+  }
+  a{ color:var(--brass-deep); }
+  a:hover{ color:var(--brass); }
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 28px; }
+  header.site{
+    position:sticky;
+    top:0;
+    background:rgba(250,249,245,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+    z-index:20;
+  }
+  .nav-row{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:16px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .wordmark{ font-family:"Source Serif 4", serif; font-weight:600; font-size:1.15rem; color:var(--ink); text-decoration:none; }
+  nav.primary ul{ list-style:none; display:flex; gap:26px; margin:0; padding:0; }
+  nav.primary a{ text-decoration:none; color:var(--ink-soft); font-size:0.95rem; }
+  .hero{ padding:64px 0 48px; border-bottom:1px solid var(--line); }
+  .hero-grid{ display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center; }
+  .eyebrow{ color:var(--ink-soft); font-size:0.98rem; margin-bottom:14px; }
+  h1.headline{ font-size:2.4rem; line-height:1.18; }
+  .hero p.sub{ margin-top:20px; color:var(--ink-soft); font-size:1.03rem; }
+  .hero-ctas{ margin-top:28px; display:flex; gap:14px; }
+  .btn{ display:inline-block; padding:11px 22px; text-decoration:none; font-size:0.95rem; border-radius:3px; border:1px solid var(--ink); }
+  .btn-primary{ background:var(--ink); color:#fff; }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--line); }
+  .hero-portrait img{ width:180px; height:180px; object-fit:cover; border-radius:4px; border:1px solid var(--line); }
+  .stats{ display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .stat{ padding:26px 20px; text-align:center; border-left:1px solid var(--line); }
+  .stat:first-child{ border-left:none; }
+  .stat .num{ font-family:"Source Serif 4", serif; font-size:1.9rem; font-weight:600; }
+  .stat .label{ margin-top:4px; font-size:0.85rem; color:var(--ink-soft); }
+  section{ padding:56px 0; border-bottom:1px solid var(--line); }
+  .section-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:34px; }
+  .timeline{ display:grid; gap:0; }
+  .role{ display:grid; grid-template-columns:170px 1fr; gap:26px; padding:26px 0; border-top:1px solid var(--line); }
+  .role:first-child{ border-top:none; }
+  .role .dates{ color:var(--ink-soft); font-size:0.9rem; }
+  .role .org{ color:var(--brass-deep); font-size:0.95rem; }
+  .role ul{ padding-left:20px; margin-top:8px; color:var(--ink-soft); }
+  .case-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .case-card{ background:var(--panel); padding:24px; border-radius:4px; border:1px solid var(--line); }
+  .case-card h3{ font-size:1.1rem; margin-bottom:8px; }
+  .case-card .tag{ font-size:0.82rem; color:var(--brass-deep); text-transform:uppercase; font-weight:600; letter-spacing:0.05em; }
+  .case-card p{ font-size:0.94rem; color:var(--ink-soft); margin-top:10px; }
+  footer.cta{ padding:60px 0; text-align:center; }
+</style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+<body>
 
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md shadow-lg">
-        Skip to main content
-    </a>
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="wordmark">Peter Good</a>
+    <nav class="primary">
+      <ul>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#cases">Case Studies</a></li>
+        <li><a href="#platforms">Enterprise Work</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <!-- Sticky Navigation Header -->
-    <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#top" class="text-xl font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors">
-                Peter Good
-            </a>
-            
-            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600">
-                <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
-                <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="#work" class="hover:text-blue-600 transition-colors">Enterprise Work</a>
-                <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
-                <a href="#education" class="hover:text-blue-600 transition-colors">Education</a>
-            </nav>
-
-            <div class="flex items-center space-x-3">
-                <a href="https://www.linkedin.com/in/peter-good/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-blue-700 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                    LinkedIn
-                </a>
-                <a href="https://github.com/Peterbgood" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 border border-slate-200 rounded-lg hover:bg-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
-                    GitHub
-                </a>
-            </div>
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Business Analyst, Enterprise CMS &amp; Accessibility Specialist</p>
+        <h1 class="headline">Bridging business strategy, CMS operations, and WCAG compliance.</h1>
+        <p class="sub">13+ years leading requirements gathering, DotNetNuke (DNN) CMS governance, and WCAG 2.2 AA accessibility standards across 50+ institutional banking platforms.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#experience">View Experience</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/peter-good/">LinkedIn Profile</a>
         </div>
-    </header>
+      </div>
+      <div class="hero-portrait">
+        <img src="peter.PNG" alt="Peter Good">
+      </div>
+    </div>
+  </section>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="py-12 sm:py-16 bg-white border-b border-slate-200">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    
-                    <div class="md:col-span-2 space-y-4">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                            Available for BSA & Web Accessibility Roles
-                        </div>
-                        
-                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
-                            Senior Business Systems Analyst &amp; Web Accessibility Lead
-                        </h1>
-                        
-                        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-                            13+ years bridging enterprise banking business requirements, software engineering, and regulatory compliance. Expert in SDLC execution, functional specs, user stories, and leading WCAG 2.2 AA accessibility audits for 50+ financial platforms serving 500k+ users.
-                        </p>
+  <div class="stats wrap">
+    <div class="stat"><div class="num">13+</div><div class="label">Years Enterprise Banking</div></div>
+    <div class="stat"><div class="num">50+</div><div class="label">CMS Platforms Managed</div></div>
+    <div class="stat"><div class="num">500K+</div><div class="label">Active End Users</div></div>
+    <div class="stat"><div class="num">AA</div><div class="label">WCAG 2.2 Compliance</div></div>
+  </div>
 
-                        <!-- Call to Action Buttons -->
-                        <div class="pt-2 flex flex-wrap gap-3">
-                            <a href="https://www.linkedin.com/in/peter-good/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                                Connect on LinkedIn
-                            </a>
-                            <a href="#experience" class="px-5 py-2.5 text-sm font-semibold text-slate-700 bg-slate-100 rounded-lg border border-slate-200 hover:bg-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2">
-                                Review Work Experience
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Profile Photo & Quick Contact -->
-                    <div class="flex flex-col items-center justify-center p-6 bg-slate-50 border border-slate-200 rounded-2xl text-center">
-                        <img src="peter.PNG" alt="Portrait of Peter Good" class="w-32 h-32 rounded-full object-cover border-2 border-white shadow-md mb-4">
-                        <h2 class="text-lg font-bold text-slate-900">Peter Good</h2>
-                        <p class="text-xs text-slate-500 mb-3">Enterprise Fintech & Accessibility Specialist</p>
-                        <div class="w-full pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-1">
-                            <p>📍 Open to Onsite / Hybrid / Remote</p>
-                            <p>🎓 A.S. Web Development</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Impact Metrics Bar -->
-        <section class="bg-slate-900 text-white py-8 border-b border-slate-800">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-blue-400">13+ Years</div>
-                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Enterprise Banking Tech</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-blue-400">50+</div>
-                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Platforms Delivered</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-blue-400">500K+</div>
-                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Active End-Users</div>
-                    </div>
-                    <div>
-                        <div class="text-2xl sm:text-3xl font-extrabold text-blue-400">WCAG 2.2 AA</div>
-                        <div class="text-xs sm:text-sm text-slate-400 mt-1">Compliance Mastery</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recruiter Skills & Core Competencies Matrix -->
-        <section id="skills" class="py-12 bg-white border-b border-slate-200">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Core Competencies &amp; Technical Skills</h2>
-                    <p class="text-sm text-slate-600">A quick overview of key skills for candidate screening and matching.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Column 1 -->
-                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                        <h3 class="text-base font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <span>📋</span> Business Analysis
-                        </h3>
-                        <ul class="text-sm text-slate-600 space-y-2">
-                            <li>• Requirements Gathering & Scoping</li>
-                            <li>• Functional Specifications & Epics</li>
-                            <li>• User Stories & Acceptance Criteria</li>
-                            <li>• User Acceptance Testing (UAT)</li>
-                            <li>• Stakeholder & Client Management</li>
-                        </ul>
-                    </div>
-
-                    <!-- Column 2 -->
-                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                        <h3 class="text-base font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <span>♿</span> Accessibility (a11y)
-                        </h3>
-                        <ul class="text-sm text-slate-600 space-y-2">
-                            <li>• WCAG 2.1 / 2.2 Level AA Standard</li>
-                            <li>• Screen Readers (NVDA, JAWS, VoiceOver)</li>
-                            <li>• Keyboard Navigation Mapping</li>
-                            <li>• Automated & Manual Auditing</li>
-                            <li>• Accessibility Governance & VPATs</li>
-                        </ul>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                        <h3 class="text-base font-semibold text-slate-900 mb-3 flex items-center gap-2">
-                            <span>🛠️</span> Technical & Fintech
-                        </h3>
-                        <ul class="text-sm text-slate-600 space-y-2">
-                            <li>• HTML5, CSS3, Semantic Markup</li>
-                            <li>• React, TypeScript, Tailwind CSS</li>
-                            <li>• CMS Governance (DNN, Multi-tenant)</li>
-                            <li>• Core Banking Systems & Compliance</li>
-                            <li>• SDLC, Agile / Scrum Frameworks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience -->
-        <section id="experience" class="py-12 bg-slate-50 border-b border-slate-200">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Work Experience</h2>
-                    <p class="text-sm text-slate-600">Track record of platform delivery, compliance governance, and analytical execution.</p>
-                </div>
-
-                <div class="space-y-8">
-
-                    <!-- Role 1 -->
-                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Personal Banker</h3>
-                                <div class="text-sm font-semibold text-blue-600">Fifth Third Bank</div>
-                            </div>
-                            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200 self-start sm:self-auto">
-                                June 2026 – Present
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                            Work directly within core banking systems, executing retail account operations, regulatory compliance procedures, and depository risk controls in a high-volume client environment.
-                        </p>
-                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
-                            <li>Apply deep working knowledge of consumer financial regulations affecting depository institutions to daily operational compliance and account servicing.</li>
-                            <li>Gain front-line customer and system operational insights, directly informing practical requirement gathering and process optimization for financial software platforms.</li>
-                            <li>Collaborate across internal banking units to ensure strict adherence to KYC, AML, and institutional risk management mandates.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Role 2 -->
-                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Web Accessibility Lead / Business Analyst</h3>
-                                <div class="text-sm font-semibold text-blue-600">FIS (Fidelity National Information Services)</div>
-                            </div>
-                            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200 self-start sm:self-auto">
-                                Feb 2012 – Mar 2026
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                            Served as the primary liaison between financial institution executives, product owners, and engineering teams. Authored business requirements, functional specifications, and user stories while directing enterprise-wide accessibility compliance across 50+ institutional banking products.
-                        </p>
-                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
-                            <li><strong>Requirement Engineering:</strong> Led end-to-end requirement elicitation, UAT plan authoring, and feature scoping across the SDLC for enterprise digital banking platform releases serving 500,000+ active users.</li>
-                            <li><strong>Accessibility Subject Matter Expertise:</strong> Directed WCAG 2.2 AA audit and remediation programs for 50+ client web applications, guaranteeing full regulatory compliance and mitigating legal/accessibility exposure.</li>
-                            <li><strong>Assistive Technology Testing:</strong> Executed comprehensive manual assistive-technology evaluations using NVDA, JAWS, VoiceOver, and keyboard-only navigation workflows.</li>
-                            <li><strong>Cross-Functional Leadership:</strong> Created standardized accessibility documentation and testing frameworks, empowering non-technical product owners, designers, and developers to uphold compliance independently.</li>
-                            <li><strong>Stakeholder Governance:</strong> Aligned compliance, technical, and UX strategy across executive leadership, Legal, Engineering, and external bank stakeholders.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Role 3 -->
-                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm relative">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-slate-900">Account Manager / Product Support</h3>
-                                <div class="text-sm font-semibold text-blue-600">FIS</div>
-                            </div>
-                            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200 self-start sm:self-auto">
-                                Nov 2006 – Jan 2012
-                            </span>
-                        </div>
-                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                            Managed client technical relationships across 50+ financial institutions utilizing online banking, cash management, and mobile solution portfolios.
-                        </p>
-                        <ul class="list-disc pl-5 text-sm text-slate-600 space-y-2">
-                            <li>Served as primary escalation point for system integrations, custom feature rollouts, and production support issues, maintaining strict SLA adherence.</li>
-                            <li>Translated complex technical issues into clear business requirements for engineering teams, driving faster issue resolution and product enhancements.</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Enterprise Work Highlights -->
-        <section id="work" class="py-12 bg-white border-b border-slate-200">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Enterprise Banking Platform Work</h2>
-                    <p class="text-sm text-slate-600">Representative production platforms delivered during tenure at FIS.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Full Build &amp; Compliance</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Geo. D. Warthen Bank</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Delivered a secure, accessible, and responsive digital banking platform with complete WCAG 2.2 AA compliance built on DNN CMS with structured content governance.
-                            </p>
-                        </div>
-                        <a href="https://www.gdwbank.com/" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-1">
-                            Visit Platform ↗
-                        </a>
-                    </div>
-
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">CMS Migration &amp; Governance</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Vast Bank</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Led multi-tenant CMS modernization, optimizing content workflows, stakeholder handoffs, and platform stability for a digitally focused institution.
-                            </p>
-                        </div>
-                        <a href="https://www.vast.bank" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-1">
-                            Visit Platform ↗
-                        </a>
-                    </div>
-
-                    <div class="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col justify-between">
-                        <div>
-                            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">Mobile-First Rebuild</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Fidelity Bank</h3>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-4">
-                                Directed requirements and execution for a ground-up mobile-first rebuild balancing strict financial regulations with seamless accessibility.
-                            </p>
-                        </div>
-                        <a href="http://www.fbot.com" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-800 inline-flex items-center gap-1">
-                            Visit Platform ↗
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Personal & Technical Side Projects -->
-        <section id="projects" class="py-12 bg-slate-50 border-b border-slate-200">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Technical Side Projects</h2>
-                    <p class="text-sm text-slate-600">Practical exploration of modern frontend architecture and developer workflows (<a href="https://github.com/Peterbgood" target="_blank" class="text-blue-600 hover:underline">github.com/Peterbgood</a>).</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    
-                    <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900">modern-bank-landing</h3>
-                            <span class="text-xs font-mono bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">React 19 / Next.js</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-3">Fintech landing page concept demonstrating component architecture, responsive design, and glassmorphic UI patterns.</p>
-                        <a href="https://github.com/Peterbgood/modern-bank-landing" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-blue-600 hover:underline">View Source Code on GitHub ↗</a>
-                    </div>
-
-                    <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900">marketing-crm</h3>
-                            <span class="text-xs font-mono bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">React / Tailwind</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-3">Kanban-style CRM interface exploring state management, component architecture, and automated deployment via GitHub Actions.</p>
-                        <a href="https://github.com/Peterbgood/marketing-crm" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-blue-600 hover:underline">View Source Code on GitHub ↗</a>
-                    </div>
-
-                    <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900">NutriGraph</h3>
-                            <span class="text-xs font-mono bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">TypeScript / Firestore</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-3">Health metrics dashboard practicing real-time database synchronization and state handling using Firebase Firestore.</p>
-                        <a href="https://github.com/Peterbgood/NutriGraph" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-blue-600 hover:underline">View Source Code on GitHub ↗</a>
-                    </div>
-
-                    <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900">secure-banking-interface</h3>
-                            <span class="text-xs font-mono bg-blue-50 text-blue-700 px-2 py-1 rounded border border-blue-100">JavaScript / Modular UI</span>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-3">Financial dashboard prototype testing role-based view controls and UI data privacy design patterns.</p>
-                        <a href="https://github.com/Peterbgood/secure-banking-interface" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-blue-600 hover:underline">View Source Code on GitHub ↗</a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section id="education" class="py-12 bg-white">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-8">
-                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Education</h2>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                        <h3 class="text-base font-bold text-slate-900">Associate of Science (A.S.) in Web Development</h3>
-                        <p class="text-sm text-slate-600 mt-1">St. Petersburg College, 2022</p>
-                    </div>
-                    <div class="p-5 bg-slate-50 border border-slate-200 rounded-xl">
-                        <h3 class="text-base font-bold text-slate-900">Web Development Certificate</h3>
-                        <p class="text-sm text-slate-600 mt-1">St. Petersburg College, 2015</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Recruiter Contact Footer CTA -->
-    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h2 class="text-2xl sm:text-3xl font-bold">Open to Business Systems Analyst &amp; Web Accessibility Roles</h2>
-            <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-                Available for onsite, hybrid, or remote positions. Let's discuss how my 13+ years of enterprise fintech experience can support your team's platform delivery goals.
-            </p>
-            <div>
-                <a href="https://www.linkedin.com/in/peter-good/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900">
-                    Connect on LinkedIn
-                </a>
-            </div>
-            <p class="text-xs text-slate-500 pt-6">&copy; 2026 Peter Good &bull; Built with Semantic HTML &amp; Tailwind CSS.</p>
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="role">
+          <div class="dates">June 2026 &ndash; Present</div>
+          <div>
+            <h3>Personal Banker</h3>
+            <div class="org">Fifth Third Bank</div>
+            <p>Direct retail operations, core banking systems execution, and regulatory compliance servicing in a member-facing financial environment. Applies real-time operational knowledge to inform requirements gathering for technical banking platforms.</p>
+          </div>
         </div>
-    </footer>
+        <div class="role">
+          <div class="dates">Feb 2012 &ndash; Mar 2026</div>
+          <div>
+            <h3>Business Analyst &amp; Web Accessibility Lead</h3>
+            <div class="org">FIS (Fidelity National Information Services)</div>
+            <p>Primary liaison between financial institutions and engineering units across 50+ enterprise banking platforms.</p>
+            <ul>
+              <li>Gathered business requirements, authored user stories/epics, and documented functional specifications for DotNetNuke (DNN) CMS platforms.</li>
+              <li>Served as enterprise WCAG 2.2 AA SME, leading audits, keyboard navigation mapping, and manual screen-reader evaluations (NVDA, JAWS, VoiceOver).</li>
+              <li>Designed support triage workflows that cleared legacy backlogs and achieved same-day resolution standards.</li>
+              <li>Coordinated SDLC change governance across Legal, UX, Product, and Engineering.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>CMS &amp; Business Analysis Case Studies</h2>
+      </div>
+      <div class="case-grid">
+        <div class="case-card">
+          <div class="tag">CMS Architecture &amp; Governance</div>
+          <h3>Enterprise CMS Standardization (DNN)</h3>
+          <p>Managed functional requirements and content workflows for 50+ financial institution websites. Standardized publishing templates, role-based access control, and change management protocols to maintain SLA compliance and reduce operational risk.</p>
+        </div>
+        <div class="case-card">
+          <div class="tag">Regulatory Compliance</div>
+          <h3>WCAG 2.2 AA Audit &amp; Remediation Framework</h3>
+          <p>Engineered an enterprise-wide accessibility compliance framework across digital banking interfaces. Conducted assistive technology testing, mapped keyboard flows, and delivered documentation empowering non-technical content teams to stay compliant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="cta">
+  <div class="wrap">
+    <h2>Open to Business Analyst, CMS Lead &amp; Accessibility Roles</h2>
+    <p>Onsite, Hybrid, or Remote &mdash; Business Requirements, CMS Governance, WCAG 2.2 AA Compliance.</p>
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/peter-good/">Connect on LinkedIn</a>
+  </div>
+</footer>
 
 </body>
 </html>
